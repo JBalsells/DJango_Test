@@ -1,0 +1,145 @@
+Numero de semana,Nombre de producto,Tipo de producto,Unidades vendidas
+1-2021,Bicicleta,Transporte,10
+2-2021,Bicicleta,Transporte,12
+3-2021,Bicicleta,Transporte,11
+4-2021,Bicicleta,Transporte,10
+5-2021,Bicicleta,Transporte,13
+6-2021,Bicicleta,Transporte,11
+7-2021,Bicicleta,Transporte,9
+8-2021,Bicicleta,Transporte,15
+9-2021,Bicicleta,Transporte,12
+10-2021,Bicicleta,Transporte,14
+11-2021,Bicicleta,Transporte,16
+12-2021,Bicicleta,Transporte,11
+1-2022,Bicicleta,Transporte,10
+2-2022,Bicicleta,Transporte,12
+3-2022,Bicicleta,Transporte,11
+4-2022,Bicicleta,Transporte,10
+5-2022,Bicicleta,Transporte,13
+6-2022,Bicicleta,Transporte,11
+7-2022,Bicicleta,Transporte,9
+8-2022,Bicicleta,Transporte,15
+9-2022,Bicicleta,Transporte,12
+10-2022,Bicicleta,Transporte,14
+11-2022,Bicicleta,Transporte,16
+12-2022,Bicicleta,Transporte,11
+1-2021,Motocicleta,Transporte,2
+2-2021,Motocicleta,Transporte,1
+3-2021,Motocicleta,Transporte,3
+4-2021,Motocicleta,Transporte,2
+5-2021,Motocicleta,Transporte,4
+6-2021,Motocicleta,Transporte,2
+7-2021,Motocicleta,Transporte,3
+8-2021,Motocicleta,Transporte,2
+9-2021,Motocicleta,Transporte,5
+10-2021,Motocicleta,Transporte,3
+11-2021,Motocicleta,Transporte,4
+12-2021,Motocicleta,Transporte,2
+1-2022,Motocicleta,Transporte,4
+2-2022,Motocicleta,Transporte,4
+3-2022,Motocicleta,Transporte,5
+4-2022,Motocicleta,Transporte,2
+5-2022,Motocicleta,Transporte,3
+6-2022,Motocicleta,Transporte,6
+7-2022,Motocicleta,Transporte,4
+8-2022,Motocicleta,Transporte,3
+9-2022,Motocicleta,Transporte,5
+10-2022,Motocicleta,Transporte,3
+11-2022,Motocicleta,Transporte,4
+12-2022,Motocicleta,Transporte,2
+1-2021,Llantas,Repuestos,40
+2-2021,Llantas,Repuestos,45
+3-2021,Llantas,Repuestos,53
+4-2021,Llantas,Repuestos,38
+5-2021,Llantas,Repuestos,61
+6-2021,Llantas,Repuestos,64
+7-2021,Llantas,Repuestos,67
+8-2021,Llantas,Repuestos,60
+9-2021,Llantas,Repuestos,55
+10-2021,Llantas,Repuestos,52
+11-2021,Llantas,Repuestos,59
+12-2021,Llantas,Repuestos,60
+1-2022,Llantas,Repuestos,40
+2-2022,Llantas,Repuestos,56
+3-2022,Llantas,Repuestos,59
+4-2022,Llantas,Repuestos,59
+5-2022,Llantas,Repuestos,61
+6-2022,Llantas,Repuestos,65
+7-2022,Llantas,Repuestos,70
+8-2022,Llantas,Repuestos,72
+9-2022,Llantas,Repuestos,65
+10-2022,Llantas,Repuestos,58
+11-2022,Llantas,Repuestos,57
+12-2022,Llantas,Repuestos,61
+1-2021,Suspensiones,Repuestos,5
+2-2021,Suspensiones,Repuestos,3
+3-2021,Suspensiones,Repuestos,6
+4-2021,Suspensiones,Repuestos,5
+5-2021,Suspensiones,Repuestos,7
+6-2021,Suspensiones,Repuestos,5
+7-2021,Suspensiones,Repuestos,3
+8-2021,Suspensiones,Repuestos,4
+9-2021,Suspensiones,Repuestos,7
+10-2021,Suspensiones,Repuestos,5
+11-2021,Suspensiones,Repuestos,6
+12-2021,Suspensiones,Repuestos,3
+1-2022,Suspensiones,Repuestos,8
+2-2022,Suspensiones,Repuestos,5
+3-2022,Suspensiones,Repuestos,6
+4-2022,Suspensiones,Repuestos,4
+5-2022,Suspensiones,Repuestos,7
+6-2022,Suspensiones,Repuestos,3
+7-2022,Suspensiones,Repuestos,6
+8-2022,Suspensiones,Repuestos,4
+9-2022,Suspensiones,Repuestos,5
+10-2022,Suspensiones,Repuestos,3
+11-2022,Suspensiones,Repuestos,6
+12-2022,Suspensiones,Repuestos,7
+1-2021,Porta Celulares,Accesorios,45
+2-2021,Porta Celulares,Accesorios,65
+3-2021,Porta Celulares,Accesorios,45
+4-2021,Porta Celulares,Accesorios,34
+5-2021,Porta Celulares,Accesorios,36
+6-2021,Porta Celulares,Accesorios,45
+7-2021,Porta Celulares,Accesorios,56
+8-2021,Porta Celulares,Accesorios,67
+9-2021,Porta Celulares,Accesorios,75
+10-2021,Porta Celulares,Accesorios,64
+11-2021,Porta Celulares,Accesorios,35
+12-2021,Porta Celulares,Accesorios,42
+1-2022,Porta Celulares,Accesorios,35
+2-2022,Porta Celulares,Accesorios,46
+3-2022,Porta Celulares,Accesorios,55
+4-2022,Porta Celulares,Accesorios,46
+5-2022,Porta Celulares,Accesorios,44
+6-2022,Porta Celulares,Accesorios,36
+7-2022,Porta Celulares,Accesorios,54
+8-2022,Porta Celulares,Accesorios,32
+9-2022,Porta Celulares,Accesorios,65
+10-2022,Porta Celulares,Accesorios,47
+11-2022,Porta Celulares,Accesorios,63
+12-2022,Porta Celulares,Accesorios,32
+1-2021,Luces,Accesorios,58
+2-2021,Luces,Accesorios,64
+3-2021,Luces,Accesorios,57
+4-2021,Luces,Accesorios,68
+5-2021,Luces,Accesorios,75
+6-2021,Luces,Accesorios,68
+7-2021,Luces,Accesorios,79
+8-2021,Luces,Accesorios,78
+9-2021,Luces,Accesorios,56
+10-2021,Luces,Accesorios,74
+11-2021,Luces,Accesorios,56
+12-2021,Luces,Accesorios,86
+1-2022,Luces,Accesorios,79
+2-2022,Luces,Accesorios,86
+3-2022,Luces,Accesorios,78
+4-2022,Luces,Accesorios,89
+5-2022,Luces,Accesorios,78
+6-2022,Luces,Accesorios,89
+7-2022,Luces,Accesorios,90
+8-2022,Luces,Accesorios,98
+9-2022,Luces,Accesorios,87
+10-2022,Luces,Accesorios,78
+11-2022,Luces,Accesorios,85
+12-2022,Luces,Accesorios,83

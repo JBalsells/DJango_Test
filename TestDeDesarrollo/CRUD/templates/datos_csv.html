@@ -1,0 +1,28 @@
+{% extends "template.html"%}
+
+{% block title %}
+DATOS EN CSV CARGADO
+{% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Numero de Semana</th>
+        <th scope="col">Nombre de producto</th>
+        <th scope="col">Tipo de producto</th>
+        <th scope="col">Unidades vendidas</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in CSVData %}
+      <tr>
+        <th scope="row">{{row.0}}</th>
+        <td>{{row.1}}</td>
+        <td>{{row.2}}</td>
+        <td>{{row.3}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

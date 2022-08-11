@@ -1,0 +1,3 @@
+Super Usuario: administrador
+Correo prueba@prueba.com
+Password: 12345678

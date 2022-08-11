@@ -1,0 +1,92 @@
+{% extends "template.html"%}
+
+{% block title %}
+DATOS EN EXCEL CARGADO
+{% endblock %}
+
+{% block content %}
+
+  <h4>Tabla 1 (Productos)</h4>
+  
+  {% for row in describe1.iterrows %}
+  {{row}}
+  {% endfor %}
+
+  <table class="table">
+    <tr>
+      {% for col in tabla1.columns %}
+        <th scope="col">
+          {{col}}
+        </th>
+      {% endfor %}
+    </tr>
+
+    {% for index, row in tabla1.iterrows %}
+      <tr>
+        {% for cell in row %}
+          <td scope="row">
+            {{cell}}
+          </td>
+          {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+  </table>
+
+  <hr>
+
+  <h4>Tabla 2 (Ingresos)</h4>
+
+  {% for row in describe2.iterrows %}
+    {{row}}
+  {% endfor %}
+
+  <table class="table">
+    <tr>
+      {% for col in tabla2.columns %}
+        <th scope="col">
+          {{col}}
+        </th>
+      {% endfor %}
+    </tr>
+
+    {% for index, row in tabla2.iterrows %}
+      <tr>
+        {% for cell in row %}
+          <td scope="row">
+            {{cell}}
+          </td>
+          {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+
+  <hr>
+
+  <h4>Tabla 3 (Ventas)</h4>
+
+  {% for row in describe3.iterrows %}
+    {{row}}
+  {% endfor %}
+
+  <table class="table">
+    <tr>
+      {% for col in tabla3.columns %}
+        <th scope="col">
+          {{col}}
+        </th>
+      {% endfor %}
+    </tr>
+
+    {% for index, row in tabla3.iterrows %}
+      <tr>
+        {% for cell in row %}
+          <td scope="row">
+            {{cell}}
+          </td>
+          {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

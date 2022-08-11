@@ -1,0 +1,58 @@
+{% extends "template.html"%}
+
+{% block title %}
+PRODUCTOS
+{% endblock %}
+
+{% block content %}
+<div class="mx-auto text-primary" style="width: 400px;">
+    <p>Seleccione solamente una opcion a buscar 1) Buscar por tipo de producto, o 2) Buscar por nombre de producto</p>
+</div>
+
+<div class="mx-auto" style="width: 400px;">
+    <div class="input-group mb-3">
+        <form action="/resultados/" method="POST">
+            {% csrf_token %}
+            <select class="form-control" aria-label=".form-select-lg example" name="type">
+                <option selected>Buscar por tipo de producto</option>
+                {% for tipo in TipoDeProducto %}
+                <option value="{{tipo.TipoDeProducto}}">{{tipo.TipoDeProducto}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" class="btn btn-primary" value="buscar">
+        </form>
+    </div>
+</div>
+  
+<div class="mx-auto" style="width: 400px;">
+    <div class="input-group mb-3">
+        <form action="/resultados/" method="POST">
+            {% csrf_token %}
+            <select class="form-control" aria-label=".form-select-lg example" name="name">
+                <option selected>Buscar por nombre de producto</option>
+                {% for producto in NombreProducto %}
+                <option value={{producto.NombreProducto}}>{{producto.NombreProducto}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" class="btn btn-primary" value="buscar">
+        </form>
+    </div>
+</div>
+
+<div div class="text-center p-3">
+    <div class="row">
+        <ul class="list-group">
+            {% for producto in productos %}
+                <ul class="list-group">
+                    <li class="list-group-item-primary"><h5><strong>Tipo de producto:</strong> {{producto.TipoDeProducto}}</h5></li>
+                    <li class="list-group-item"><strong>Nombre de producto:</strong> {{producto.NombreProducto}}</li>
+                    <li class="list-group-item"><strong>Precio unitario:</strong> Q. {{producto.PrecioUnitario}}({{producto.FechaPrecio}})</li>
+                    <li class="list-group-item"><strong>Ingreso a bodega:</strong> {{producto.Bodega}}| <strong>Unidades vendidas:</strong> {{producto.Liquidado}}</li>
+                    <li class="list-group-item"><strong>Ventas:</strong> {{producto.Venta}}(<strong>Última Semana vendida:</strong> {{producto.Ultima_Semana}}), <strong>Histórico:</strong> <a href="/historico/{{producto.id}}">link</a></li>
+                </ul>
+                <br/>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

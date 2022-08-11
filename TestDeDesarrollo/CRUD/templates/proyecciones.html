@@ -1,0 +1,90 @@
+{% extends "template.html"%}
+
+{% block head %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Semana', 'Ventas', {'type': 'string', 'role': 'style'}],
+      {% for d in data %}
+      [{{d.1}},{{d.0}}, 'point { size: 14; shape-type: circle; fill-color: blue }'],
+      {% endfor %}
+      [{{Prediccion.0}},{{Prediccion.1}}, 'point { size: 18; shape-type: star; fill-color: green; }'],
+    ]);
+
+    var options = {
+      title: 'Semanas Vs. Ventas',
+      hAxis: {title: 'Semana', minValue: 0, maxValue: 15},
+      vAxis: {title: 'Ventas', minValue: 0, maxValue: 15},
+      legend: 'none',
+      trendlines: { 0: {} }
+    };
+
+    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+{% endblock %}
+
+{% block title %}
+PROYECCIONES
+{% endblock %}e
+
+{% block content %}
+  <div class="mx-auto" style="width: 400px;">
+    <div class="input-group mb-3">
+        <form action="/forecast/" method="POST">
+            {% csrf_token %}
+            <select class="form-control" aria-label=".form-select-lg example" name="name">
+                <option selected>Buscar por nombre de producto</option>
+                {% for producto in NombreProducto %}
+                <option value={{producto.NombreProducto}}>{{producto.NombreProducto}}</option>
+                {% endfor %}
+            </select>
+
+            <select class="form-control" aria-label=".form-select-lg example" name="fecha">
+                <option selected>Año a buscar</option>
+                {% for fecha in Fechas %}
+                <option value={{fecha}}>{{fecha}}</option>
+                {% endfor %}
+            </select>
+
+            <input type="text" class="form-control" placeholder="Mes a predecir" aria-label=".form-select-lg example" name="prediccion">
+          </select>
+
+            <input type="submit" class="btn btn-primary" value="buscar">
+        </form>
+    </div>
+  </div>
+
+  <div div class="text-center p-3">
+      <div class="row">
+          <ul class="list-group">
+              <ul class="list-group">
+                  <li class="list-group-item-primary"><h5><strong>Tipo de producto:</strong> {{producto.TipoDeProducto}}</h5></li>
+                  <li class="list-group-item"><strong>Nombre de producto:</strong> {{producto.NombreProducto}}</li>
+              </ul>
+          </ul>
+      </div>
+  </div>
+    
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Coeficiente de regresión</th>
+          <th scope="col">Intersección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">{{constantes.0}}</th>
+          <td>{{constantes.1}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+{% endblock %}

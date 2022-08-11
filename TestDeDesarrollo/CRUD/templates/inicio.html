@@ -1,0 +1,156 @@
+{% extends "template.html"%}
+
+{% block title %}
+INICIO
+{% endblock %}
+
+{% block content %}
+
+<p class="text-danger"><strong>En esta página se describe a detalle las dependencias, el acceso como "admin", y el ejercicio con la
+    descripción de lo que se ha desarrollado. Junto a cada inciso del ejercicio, se encuentra en color verde
+    descrita la solución.</strong>
+</p>
+<hr>
+
+<h2><strong>Dependencias</strong></h2>
+<ul>
+    <li class="list-group-item">Pandas (pip install pandas)</li>
+    <li class="list-group-item">Scikit</li>
+    <li class="list-group-item">openpyxl (pip install openpyxl)</li>
+</ul>
+
+<h2><strong>Acceso</strong></h2>
+<ul>
+    <li class="list-group-item text-danger"><strong>Usuario: administrador</strong></li>
+    <li class="list-group-item">Correo: prueba@prueba.com</li>
+    <li class="list-group-item">Contraseña: 12345678</li>
+</ul>
+
+<hr>
+<h2><strong>Ejercicio desarrollado en Django</strong></h2>
+<ol class="list-group">
+    <ol class="list-group">
+        <li class="list-group"><h5><strong>Crear una base de datos que contenga las siguientes tablas, se anexa un Excel para:</strong></li>
+            <ul class="list-group">
+                <li class="list-group-item">Tabla 1</li>
+                <ul>
+                    <li class="list-group-item">Pais</li>
+                    <li class="list-group-item">Tipo de Producto</li>
+                    <li class="list-group-item">Nombre Producto</li>
+                    <li class="list-group-item">Fecha Precio</li>
+                </ul>
+                <li class="list-group-item">Tabla 2</li>
+                <ul>
+                    <li class="list-group-item">Nombre Producto</li>
+                    <li class="list-group-item">Cantidad ingresada a bodega</li>
+                    <li class="list-group-item">Fecha ingreso a bodega</li>
+                </ul>
+                <li class="list-group-item">Tabla 3</li>
+                <ul>
+                    <li class="list-group-item">Nombre Producto</li>
+                    <li class="list-group-item">Unidades vendidas</li>
+                    <li class="list-group-item">Numero semana</li>
+                </ul>
+            </ul>
+            <li class="list-group text-success"><p><strong>La base de datos se realizó con SQLite3 para que se generara un archivo directamente dentro del proyecto.
+                El archivo de base de datos se llama db.sqlite3 en la raíz del proyecto. Las tablas fueron nombradas según la función de cada una de ellas
+                para facilitar el desarrollo del ORM. La tabla 1 se llama "Productos", la tabla 2 se llama "Ingresos" y la tabla 3 se llama "Ventas". Todas
+                están relacionadas con llave primaria en la tabla Productos(Nombre Producto), y llaves foráneas en Ingresos y ventas. Todas las tablas tienen 2 campos
+                más que se llenan automaticamente (created_at y updated_at).</strong></p>
+            </li>
+
+            <li class="list-group"><h5><strong>Crear una página web donde muestre los siguientes campos con datos actuales en base a la
+                base de datos</strong></li>
+                <ul class="list-group">
+                    <li class="list-group-item">Tipo de producto</li>
+                    <li class="list-group-item">Nombre de producto</li>
+                    <li class="list-group-item">Precio unitario</li>
+                    <li class="list-group-item">Fecha Precio</li>
+                    <li class="list-group-item">Fecha de ingreso a bodega</li>
+                    <li class="list-group-item">Unidades vendidas</li>
+                    <li class="list-group-item">Ventas(unidades vendidas por precio unitario)</li>
+                    <li class="list-group-item">Última semana con unidades vendidas</li>
+                    <li class="list-group-item">Link de gráfico histórico de unidades vendidas vs numero de semana</li>
+                </ul>
+                <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Productos". En el cuerpo de la página se muestra una lista con el contenido
+                    de cada producto existente en la base de datos. en el "link" de cada producto, se despliega el gráfico correspondiente a la comparación de las ventas en el
+                    número de semana de cada año en total.
+                </strong></p>
+                </li>
+
+                <li class="list-group"><h5><strong>La página web debe contar con motor de búsqueda por tipo de producto, por nombre de
+                    producto que muestra la información de los campos indicados en numeral 2</strong></li>
+                    <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Productos". en la parte superior del cuerpo de la página. Se tienen 2 menús desplegables,
+                        al seleccionar una opción de cualquiera de ambos, filtra la información y muestra solo lo solicitado dentro de la misma página. En caso de llenar la información de 
+                        ambos, solamente hará la búsqueda del formulario en el que se presione "buscar".
+                    </strong></p>
+                </li>
+
+                <li class="list-group"><h5><strong>La página web debe contar con la opción para poder agregar o modificar líneas a la base de
+                    datos, es decir al elegir que quiere ingresar o modificar un nuevo producto, podrá ingresar
+                    información en una nueva línea a los campos del numeral 2 a,b,c,d,e o modificar cada
+                    campo de un producto específico.</strong></li>
+                <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Modificar/Eliminar". Dicha pestaña lleva al panel de administración configurable de DJango, el cuál 
+                        ha sido configurado desde el archivo "admin.py" en la aplicación creada llamada "CRUD". El motivo de hacerlo de esta manera ha sido para aprovechar el resto del tiempo de 
+                        desarrollo para las funciones que requieren más trabajo, dado que desde el panel de administración se llega al mismo objetivo.
+                    <ul class="list-group">
+                        <li class="list-group-item">Usuario: administrador</li>
+                        <li class="list-group-item">Correo: prueba@prueba.com</li>
+                        <li class="list-group-item">Contraseña: 12345678</li>
+                    </ul>
+                    </strong></p>
+                </li>
+
+                <li class="list-group"><h5><strong>El usuario podrá subir a la base de datos un csv semanal con datos siguientes actualizando
+                    así las tablas respectivas y actualizando la página web:</strong></li>
+                    <ul class="list-group">
+                        <li class="list-group-item">Numero de semana</li>
+                        <li class="list-group-item">Nombre de producto</li>
+                        <li class="list-group-item">Tipo de producto</li>
+                        <li class="list-group-item">Unidades vendidas</li>
+                    </ul>
+                <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Cargar" en el primer formulario. Por los datos descritos es
+                    para agregar ventas. Lo que se hace es agregar ventas en un producto existente(Para poder agregar ventas de un producto, debe existir el producto ya en base de datos).
+                    Los datos agregados se muestran en una tabla en la página web al ser cargados a la base de datos SQLite3.
+                    La plantilla a cargar se llama "Plantilla.csv" que se encuentra en el directorio "Plantillas" en la raíz del proyecto.
+                </strong></p>
+                </li>
+
+                <li class="list-group"><h5><strong>La página web debe contar con un link que se llamará “Proyecciones” el cual re direccionará
+                    a otra página web donde el usuario podrá ingresar el nombre del producto y elegir a cuánto
+                    tiempo desea el forecast de unidades vendidas (6 meses, 1 año, 2 año) El cálculo del
+                    forecast lo realizará utilizando Scikit mostrando la gráfica y tabla de forecast. El punto inicial
+                    del forecast es la última fecha en la que se hizo modificación al precio unitario.</strong></li>
+                <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Proyecciones". se deben seleccionar los 3 campos del formulario para poder obtener las proyecciones 
+                    necesarias. El primer campo es el nombre del producto a buscar(un menu seleccionable), el segundo campo es el año a buscar(un menu seleccionable) y el tercer campo es la proyeccion
+                    a predecir(se ingresa un numero entero o flotante que haga referencia al mes proyectado, considerando que los meses van desde 1 en adelante, y considerando que no falta ningun mes dentro
+                    de los datos).
+                </strong></p>
+                </li>
+                
+                <li class="list-group"><h5><strong>Cargar el Excel adjunto a un dataframe en Pandas y consolide por producto el máximo,
+                    mínimo y el promedio y debe exportarlo a un Excel el cuadro resumen, incluido en una
+                    pagina web.</strong></li>
+                <li class="list-group text-success"><p><strong>Se encuentra en la pestaña "Cargar" en el segundo formulario. Se muestra una version web del Excel, sin embargo, he desacrivado 
+                    la descarga del mismo al tener problemas con un error que he estado investigando como solucionarlo, sin embargo no quiero retrasar la entrega de lo que funciona bien.
+                    La plantilla a cargar ha sido la plantilla que me han entregado en .xlsx(Tabla base de datos test), se encuentra en el directorio "plantillas" en la raíz del proyecto.
+                </strong></p>
+                </li>
+
+                <li class="list-group"><h5><strong>Proponer un método para que existan diferentes niveles de acceso a la página web, por
+                    ejemplo para que exista un nivel de usuario que solo pueda ver información de un país
+                    específico. Otro nivel para que permita ver toda la información de la página pero que no
+                    pueda hacer modificaciones. Otro nivel que permita ver toda la información de la página y
+                    modificar campos.</strong></li>
+                <li class="list-group text-success"><p><strong>
+                    Es posible utilizar una plataforma de autenticación y autorización como Auth0, Oauth2. Existen varias plataformas de autenticación configurando los middlewares correspondientes dependiendo el
+                    nivel que se requiera para cada tipo de usuario.
+                    OAuth2 es un protocolo de login en un sitio.
+
+                    Una forma de crear niveles de usuario es crear un rol de usuario a nivel de base de datos, y verificar antes de entrar a cada vista(en un modelo MVT) o controlador(en modelo MVC) si se tiene acceso, 
+                    sino retornar una vista general que muestre que no se tiene acceso.
+                </strong></p>
+                </li>
+    </ol>
+</ol>
+{% endblock %}
